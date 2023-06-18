@@ -12,9 +12,7 @@ import * as Leaflet from 'leaflet';
   ],
   template: `
     <div>
-      <p>Top</p>
-      <div clas="map" style="width: 900px; height: 900px" leaflet [leafletOptions]="options"></div>
-      <p>Bottom</p>
+      <div clas="map" style="width: 750px; height: 750px" leaflet [leafletOptions]="options"></div>
     </div>
   `,
   styleUrls: ['./map.component.css']
@@ -22,8 +20,10 @@ import * as Leaflet from 'leaflet';
 export class MapComponent {
   options: Leaflet.MapOptions = {
     layers: getLayers(),
-    zoom: 14,
-    center: new Leaflet.LatLng(0, 0)
+    zoom: 2,
+    maxZoom: 14,
+    minZoom: 2,
+    center: new Leaflet.LatLng(0, 0),
   }
 }
 export const getLayers = (): Leaflet.Layer[] => {

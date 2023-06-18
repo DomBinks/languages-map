@@ -29,7 +29,6 @@
               "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [
-              "src/assets/map.js"
             ]
           },
           "configurations": {
