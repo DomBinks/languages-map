@@ -11,9 +11,8 @@ import * as Leaflet from 'leaflet';
     LeafletModule
   ],
   template: `
-    <div>
-      <div clas="map" style="width: 750px; height: 750px" leaflet [leafletOptions]="options"></div>
-    </div>
+    <div class="map" style="width: 50%; height: 750px;"
+      leaflet [leafletOptions]="options"></div>
   `,
   styleUrls: ['./map.component.css']
 })
@@ -29,7 +28,7 @@ export class MapComponent {
 export const getLayers = (): Leaflet.Layer[] => {
   return [
     new Leaflet.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
+      attribution: '&copy; <a href=https://www.openstreetmap.org/copyright target="_blank">OpenStreetMap</a> contributors'
     } as Leaflet.TileLayerOptions),
   ] as Leaflet.Layer[];
 };
