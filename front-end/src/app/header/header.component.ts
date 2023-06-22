@@ -20,8 +20,8 @@ import { RouterModule } from '@angular/router';
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a [routerLink]="['/']" [routerLinkActive]="['active']" class="nav-link" aria-current="page" href="/">Map</a>
-            <a [routerLinkActive]="['active']" class="nav-link" href="/about">About</a>
+            <a routerLink="/map" routerLinkActive="active" class="nav-link" href="/">Map</a>
+            <a routerLink="/about" routerLinkActive="active" class="nav-link" href="/about">About</a>
           </div>
         </div>
       </div>
