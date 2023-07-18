@@ -11,7 +11,7 @@ import * as Leaflet from 'leaflet';
     LeafletModule
   ],
   template: `
-    <div class="map" style="width: 50%; height: 750px;"
+    <div class="map" style="width: 100%; height: 750px;"
       leaflet [leafletOptions]="options"></div>
   `,
   styleUrls: ['./map.component.css']

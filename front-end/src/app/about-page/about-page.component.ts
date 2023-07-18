@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
-import { MapComponent } from '../map/map.component';
 
 @Component({
   selector: 'app-about-page',
@@ -9,7 +8,6 @@ import { MapComponent } from '../map/map.component';
   imports: [
     CommonModule,
     HeaderComponent,
-    MapComponent
   ],
   template: `
     <h1>Test</h1>
