@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { LatLngExpression } from 'leaflet';
 import * as Leaflet from 'leaflet';
+import uk from './UK.json';
 
 @Component({
   selector: 'app-map',
@@ -24,8 +26,13 @@ export class MapComponent {
     minZoom: 2,
     center: new Leaflet.LatLng(0, 0),
   };
+
+  coords: number[][] = uk.features[0].geometry.coordinates[0][0];
+
   layers: Array<Leaflet.Layer> = [
-    Leaflet.circle([ 51.49995, -0.1248 ], { radius: 5000 }),
+      //Leaflet.polygon([[ 51.49995, -0.1248 ], [ 51.49995, 0.1248 ], [ 52.49995, -0.1248 ]]),
+      //Leaflet.polygon(this.coords as LatLngExpression[])
+      Leaflet.geoJSON(uk as any),
   ];
 }
 export const getLayers = (): Leaflet.Layer[] => {
