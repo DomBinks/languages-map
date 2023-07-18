@@ -12,7 +12,7 @@ import * as Leaflet from 'leaflet';
   ],
   template: `
     <div class="map" style="width: 100%; height: 750px;"
-      leaflet [leafletOptions]="options"></div>
+      leaflet [leafletOptions]="options" [leafletLayers]="layers"></div>
   `,
   styleUrls: ['./map.component.css']
 })
@@ -23,7 +23,10 @@ export class MapComponent {
     maxZoom: 14,
     minZoom: 2,
     center: new Leaflet.LatLng(0, 0),
-  }
+  };
+  layers: Array<Leaflet.Layer> = [
+    Leaflet.circle([ 51.49995, -0.1248 ], { radius: 5000 }),
+  ];
 }
 export const getLayers = (): Leaflet.Layer[] => {
   return [
