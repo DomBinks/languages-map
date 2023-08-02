@@ -11,12 +11,14 @@ dm,Dominica
 gd,Grenada
 jm,Jamaica
 ms,Montserrat
+################################pr,Puerto Rico
 kn,Saint Kitts and Nevis
 lc,Saint Lucia
 vc,Saint Vincent and the Grenadines
 tt,Trinidad and Tobago
 tc,Turks and Caicos Islands
 us,United States
+################################vi,Virgin Islands, U.S.
 fk,Falkland Islands
 gy,Guyana
 gi,Gibraltar
@@ -32,7 +34,7 @@ sz,Eswatini
 gm,The Gambia
 gh,Ghana
 ke,Kenya
-lesotho,Lesotho
+ls,Lesotho
 lr,Liberia
 mw,Malawi
 mu,Mauritius
@@ -48,29 +50,31 @@ tz,Tanzania
 ug,Uganda
 zm,Zambia
 zw,Zimbabwe
+##################################ad,Akrotiri and Dhekelia
+##################################ci,Christmas Island
+##################################cc,Cocos Islands
 in,India
 pk,Pakistan
 ph,Philippines
 sg,Singapore
 au,Australia
+##################################as,American Samoa
 ck,Cook Islands
 fj,Fiji
+##################################gu,Guam
 ki,Kiribati
 mh,Marshall Islands
 fm,Federated States of Micronesia
 nr,Nauru
 nz,New Zealand
 nu,Niue
+##################################nf,Norfolk Islands
+##################################np,Northern Mariana Islands
 pw,Palau
 pg,Papua New Guinea
 pn,Pitcairn Islands
 ws,Samoa
+##################################sb,Solomon Islands
 tk,Tokelau
 tv,Tuvalu
 vu,Vanuatu
-
-Puetro Rico, United States Virgin Islands, Akrotiri and Dhekelia,
-Christmas Island, Cocos (Keeling) Islands, Hong Kong, American Samoa,
-Guam, Norfolk Island, Northern Mariana Islands, Solomon Islands not included
-
-Lesotho is 7 characters not 2

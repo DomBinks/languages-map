@@ -32,7 +32,6 @@ import { MapLayersService } from '../map-layers.service';
 })
 
 export class SelectLanguageComponent {
-
   // Called when a language selection checkbox is changed
   languageChange(event: Event, language: String) {
     // If the checkbox has been checked
@@ -40,7 +39,8 @@ export class SelectLanguageComponent {
       // Add the correct layer(s) to the layers array for the language
       if(language == "en")
       {
-        this.layersService.addLayer("en");
+        //this.layersService.addLayer("en");
+        this.layersService.addEnglish();
       }
       if(language == "fr")
       {
@@ -56,7 +56,8 @@ export class SelectLanguageComponent {
       // Remove the correct layers(s) from the layers array for the language
       if(language == "en")
       {
-        this.layersService.removeLayer("en");
+        //this.layersService.removeLayer("en");
+        this.layersService.removeEnglish();
       }
       if(language == "fr")
       {
