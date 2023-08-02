@@ -39,8 +39,7 @@ export class SelectLanguageComponent {
       // Add the correct layer(s) to the layers array for the language
       if(language == "en")
       {
-        //this.layersService.addLayer("en");
-        this.layersService.addEnglish();
+        this.layersService.addLayer("en");
       }
       if(language == "fr")
       {
@@ -56,8 +55,7 @@ export class SelectLanguageComponent {
       // Remove the correct layers(s) from the layers array for the language
       if(language == "en")
       {
-        //this.layersService.removeLayer("en");
-        this.layersService.removeEnglish();
+        this.layersService.removeLayer("en");
       }
       if(language == "fr")
       {

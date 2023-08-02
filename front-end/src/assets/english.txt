@@ -11,14 +11,12 @@ dm,Dominica
 gd,Grenada
 jm,Jamaica
 ms,Montserrat
-################################pr,Puerto Rico
 kn,Saint Kitts and Nevis
 lc,Saint Lucia
 vc,Saint Vincent and the Grenadines
 tt,Trinidad and Tobago
 tc,Turks and Caicos Islands
 us,United States
-################################vi,Virgin Islands, U.S.
 fk,Falkland Islands
 gy,Guyana
 gi,Gibraltar
@@ -50,26 +48,19 @@ tz,Tanzania
 ug,Uganda
 zm,Zambia
 zw,Zimbabwe
-##################################ad,Akrotiri and Dhekelia
-##################################ci,Christmas Island
-##################################cc,Cocos Islands
 in,India
 pk,Pakistan
 ph,Philippines
 sg,Singapore
 au,Australia
-##################################as,American Samoa
 ck,Cook Islands
 fj,Fiji
-##################################gu,Guam
 ki,Kiribati
 mh,Marshall Islands
 fm,Federated States of Micronesia
 nr,Nauru
 nz,New Zealand
 nu,Niue
-##################################nf,Norfolk Islands
-##################################np,Northern Mariana Islands
 pw,Palau
 pg,Papua New Guinea
 pn,Pitcairn Islands
@@ -78,3 +69,13 @@ sb,Solomon Islands
 tk,Tokelau
 tv,Tuvalu
 vu,Vanuatu
+
+Puerto Rico
+Virgin Islands, U.S.
+Akrotiri and Dhekelia
+Christmas Island
+Cocos Islands
+American Samoa
+Guam
+Norfolk Islands
+Northern Mariana Islands

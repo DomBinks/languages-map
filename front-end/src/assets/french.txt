@@ -1,0 +1,28 @@
+bj,Benin
+bf,Burkina Faso
+cg,Congo
+cd,Democratic Republic of Congo
+ci,Cote d'Ivoire
+fr,France
+ga,Gabon
+gn,Guinea
+mc,Monaco
+ne,Niger
+sn,Senegal
+tg,Togo
+be,Belgium
+bi,Burundi
+cm,Cameroon
+ca,Canada
+td,Chad
+cf,Central African Republic
+km,Comoros
+dj,Djibouti
+gq,Equatorial Guinea
+ht,Haiti
+lu,Luxembourg
+mg,Madagascar
+rw,Rwanda
+sc,Seychelles
+ch,Switzerland
+vu,Vanuatu
