@@ -74,7 +74,7 @@ pw,Palau
 pg,Papua New Guinea
 pn,Pitcairn Islands
 ws,Samoa
-##################################sb,Solomon Islands
+sb,Solomon Islands
 tk,Tokelau
 tv,Tuvalu
 vu,Vanuatu

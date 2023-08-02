@@ -4,6 +4,8 @@ import uk from '../assets/gb.json';
 import france from '../assets/fr.json';
 import spain from '../assets/es.json';
 import english from '../assets/english.json';
+import osmtogeojson, { OsmToGeoJSON } from 'osmtogeojson';
+
 
 @Injectable({
   providedIn: 'root'
@@ -60,7 +62,7 @@ export class MapLayersService {
 
   addEnglish() {
     // For each country in the list of countries that speak English
-    for(let i = 0; i < 10; i++)
+    for(let i = 0; i < 71; i++)
     {
       // Print the url to get the JSON for the country
       console.log(this.urlPrefix + english.countries[i].toUpperCase() + this.urlSuffix);
@@ -68,15 +70,14 @@ export class MapLayersService {
       // Get the JSON using the Overpass API
       fetch(this.urlPrefix + english.countries[i].toUpperCase() + this.urlSuffix
       ).then((response) => {
-        // Return the response as a JSON
+        // Return the response as an OSM JSON
         return response.json()
       }).then((data) => {
-        // Print the JSON
-        console.log(data);
+        // Convert the OSM JSON to a GeoJSON
+        let json: any = osmtogeojson(data);
 
-        // Create a Leaflet Layer using the data returned
-        // DOESN'T WORK AS DATA ISN'T A GEOJSON - NEEDS CONVERTING
-        let layer: Leaflet.Layer = Leaflet.geoJSON(data as any, {style: {'color': '#00FF00'}});
+        // Create a Leaflet Layer using the GeoJson
+        let layer: Leaflet.Layer = Leaflet.geoJSON(json as any, {style: {'color': '#00FF00'}});
 
         // Add the layer to the layers on the map
         this.layers.push(layer);
