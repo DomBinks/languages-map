@@ -59,6 +59,9 @@ export class MapLayersService {
         // Convert the OSM JSON to a GeoJSON
         let json: any = osmtogeojson(data);
 
+        // Remove any points on the map in the GeoJSON
+        json["features"] = json["features"].filter((feature: any) => feature["geometry"]["type"] != "Point");
+
         // Create a Leaflet Layer using the GeoJson
         let layer: Leaflet.Layer = Leaflet.geoJSON(json as any, color);
 
