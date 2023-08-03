@@ -36,35 +36,11 @@ export class SelectLanguageComponent {
   languageChange(event: Event, language: String) {
     // If the checkbox has been checked
     if(((event.target) as HTMLInputElement).checked) {
-      // Add the correct layer(s) to the layers array for the language
-      if(language == "en")
-      {
-        this.layersService.addLayer("en");
-      }
-      if(language == "fr")
-      {
-        this.layersService.addLayer("fr");
-      }
-      if(language == "es")
-      {
-        this.layersService.addLayer("es");
-      }
+      this.layersService.addLayers(language); // Add each country that speaks this language to the layers array
     }
     // If the checkbox has been unchecked
     else {
-      // Remove the correct layers(s) from the layers array for the language
-      if(language == "en")
-      {
-        this.layersService.removeLayer("en");
-      }
-      if(language == "fr")
-      {
-        this.layersService.removeLayer("fr");
-      }
-      if(language == "es")
-      {
-        this.layersService.removeLayer("es");
-      }
+      this.layersService.removeLayers(language); // Remove each country that speaks this language from the layers array
     }
   }
   
