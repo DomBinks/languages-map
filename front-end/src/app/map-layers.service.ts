@@ -4,6 +4,9 @@ import osmtogeojson from 'osmtogeojson';
 import english from '../assets/english.json';
 import french from '../assets/french.json';
 import spanish from '../assets/spanish.json';
+import mandarin from '../assets/mandarin.json';
+import hindi from '../assets/hindi.json';
+import arabic from '../assets/arabic.json';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +18,9 @@ export class MapLayersService {
   public englishLayers: Leaflet.Layer[] = []; // Stores the current Enlgish layers
   public frenchLayers: Leaflet.Layer[] = []; // Stores the current French layers
   public spanishLayers: Leaflet.Layer[] = []; // Stores the current Spanish layers
+  public mandarinLayers: Leaflet.Layer[] = []; // Stores the current Mandarin layers
+  public hindiLayers: Leaflet.Layer[] = []; // Stores the current Hindi layers
+  public arabicLayers: Leaflet.Layer[] = []; // Stores the current Arabic layers
 
   // Get the prefix and suffix of the URL used to get the geojson data
   public urlPrefix: string = "https://overpass-api.de/api/interpreter?data=[out:json];rel[admin_level=2][\"ISO3166-1\"=\""
@@ -48,6 +54,28 @@ export class MapLayersService {
       countries = spanish.countries;
       color = {style: {'color': '#FF0000'}};
       languageLayers = this.spanishLayers;
+    }
+    else if(language == "md")
+    {
+      numCountries = 3;
+      countries = mandarin.countries;
+      color = {style: {'color': '#FFFF00'}};
+      languageLayers = this.mandarinLayers;
+ 
+    }
+    else if(language == "hd")
+    {
+      numCountries = 1;
+      countries = hindi.countries;
+      color = {style: {'color': '#FF00FF'}};
+      languageLayers = this.hindiLayers;
+    }
+    else if(language == "ab")
+    {
+      numCountries = 24;
+      countries = arabic.countries;
+      color = {style: {'color': '#00FFFF'}};
+      languageLayers = this.arabicLayers;
     }
 
     // For each country in the array of countries that speak this language
@@ -88,6 +116,19 @@ export class MapLayersService {
     else if(language == "es")
     {
       languageLayers = this.spanishLayers;
+    }
+    else if(language == "md")
+    {
+      languageLayers = this.mandarinLayers;
+ 
+    }
+    else if(language == "hd")
+    {
+      languageLayers = this.hindiLayers;
+    }
+    else if(language == "ab")
+    {
+      languageLayers = this.arabicLayers;
     }
 
     // For each layer for this languageLayers array

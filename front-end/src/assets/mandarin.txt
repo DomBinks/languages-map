@@ -1,0 +1,3 @@
+cn,China
+tw,Taiwan
+sg,Singapore
