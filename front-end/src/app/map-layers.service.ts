@@ -12,6 +12,8 @@ import arabic from '../assets/arabic.json';
   providedIn: 'root'
 })
 export class MapLayersService {
+  public codeToGeoJSON: Map<string, any> = new Map<string, any>; // Cache for fetched GeoJSONs
+
   public layers: Array<Leaflet.Layer> = []; // Stores all the current layers on the map
 
   // Stores all the current layers for each languge;
@@ -81,22 +83,36 @@ export class MapLayersService {
     // For each country in the array of countries that speak this language
     for(let i = 0; i < numCountries; i++)
     {
-      // Get the JSON using the Overpass API
-      fetch(this.urlPrefix + countries[i].toUpperCase() + this.urlSuffix
-      ).then((response) => {
-        return response.json() // Return the response as an OSM JSON
-      }).then((data) => {
-        let json: any = osmtogeojson(data); // Convert the OSM JSON to a GeoJSON
-
-        // Remove any points on the map in the GeoJSON (the things that look like pins)
-        json["features"] = json["features"].filter((feature: any) => feature["geometry"]["type"] != "Point");
-
-        let layer: Leaflet.Layer = Leaflet.geoJSON(json as any, color); // Create a Leaflet Layer using the GeoJson
-        
+      // If this country's GeoJSON has already been found
+      if(this.codeToGeoJSON.has(countries[i].toUpperCase()))
+      {
+        let layer: Leaflet.Layer = Leaflet.geoJSON(
+          this.codeToGeoJSON.get(countries[i].toUpperCase()) as any, color); // Create a Leaflet Layer using the GeoJson
         this.layers.push(layer); // Add the layer to the layers on the map 
-
         languageLayers.push(layer); // Add the layer to the layers for this language
-      })
+
+      }
+      // If we need to fetch this country's GeoJSON
+      else
+      {
+        // Get the JSON using the Overpass API
+        fetch(this.urlPrefix + countries[i].toUpperCase() + this.urlSuffix
+        ).then((response) => {
+          return response.json() // Return the response as an OSM JSON
+        }).then((data) => {
+          let json: any = osmtogeojson(data); // Convert the OSM JSON to a GeoJSON
+
+          // Remove any points on the map in the GeoJSON (the things that look like pins)
+          json["features"] = json["features"].filter((feature: any) => feature["geometry"]["type"] != "Point");
+
+          // Add this GeoJSON to the cache of fetched GeoJSONs
+          this.codeToGeoJSON.set(countries[i].toUpperCase(), json);
+
+          let layer: Leaflet.Layer = Leaflet.geoJSON(json as any, color); // Create a Leaflet Layer using the GeoJson
+          this.layers.push(layer); // Add the layer to the layers on the map 
+          languageLayers.push(layer); // Add the layer to the layers for this language
+        })
+      }
     }
   }
 
