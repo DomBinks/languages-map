@@ -12,7 +12,7 @@ import { MapLayersService } from '../map-layers.service';
     LeafletModule
   ],
   template: `
-    <div class="map" style="width: 100%; height: 750px;"
+    <div class="map" style="width: 1100px; height: 750px;"
       leaflet [leafletOptions]="options" [leafletLayers]="this.layersService.layers"></div>
   `,
   styleUrls: ['./map.component.css']

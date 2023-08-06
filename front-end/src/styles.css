@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: slategray;
+    color: white;
+}
+
+.content {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}

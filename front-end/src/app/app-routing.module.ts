@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Router, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { MapPageComponent } from './map-page/map-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 
@@ -13,4 +13,5 @@ const routes : Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

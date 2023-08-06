@@ -9,9 +9,7 @@ import { HeaderComponent } from '../header/header.component';
     CommonModule,
     HeaderComponent,
   ],
-  template: `
-    <h1>Test</h1>
-  `,
+  templateUrl: './about-page.component.html',
   styleUrls: ['./about-page.component.css']
 })
 export class AboutPageComponent {
