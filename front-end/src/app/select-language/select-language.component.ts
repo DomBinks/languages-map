@@ -44,6 +44,31 @@ import { MapLayersService } from '../map-layers.service';
           Arabic
         </label>
       </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'pt')">
+        <label class="form-check-label" for="flexCheckChecked">
+          Portuguese
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'ru')">
+        <label class="form-check-label" for="flexCheckChecked">
+          Russian
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'jp')">
+        <label class="form-check-label" for="flexCheckChecked">
+          Japanese
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'kr')">
+        <label class="form-check-label" for="flexCheckChecked">
+          Korean
+        </label>
+      </div>
+
     </div>
   `,
   styleUrls: ['./select-language.component.css']

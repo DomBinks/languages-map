@@ -7,6 +7,10 @@ import spanish from '../assets/spanish.json';
 import mandarin from '../assets/mandarin.json';
 import hindi from '../assets/hindi.json';
 import arabic from '../assets/arabic.json';
+import portuguese from '../assets/portuguese.json';
+import russian from '../assets/russian.json';
+import japanese from '../assets/japanese.json';
+import korean from '../assets/korean.json';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +27,10 @@ export class MapLayersService {
   public mandarinLayers: Leaflet.Layer[] = []; // Stores the current Mandarin layers
   public hindiLayers: Leaflet.Layer[] = []; // Stores the current Hindi layers
   public arabicLayers: Leaflet.Layer[] = []; // Stores the current Arabic layers
+  public portugueseLayers: Leaflet.Layer[] = []; // Stores the current Portuguese layers
+  public russianLayers: Leaflet.Layer[] = []; // Stores the current Russian layers
+  public japaneseLayers: Leaflet.Layer[] = []; // Stores the current Japanese layers
+  public koreanLayers: Leaflet.Layer[] = []; // Stores the current Korean layers
 
   // Get the prefix and suffix of the URL used to get the geojson data
   public urlPrefix: string = "https://overpass-api.de/api/interpreter?data=[out:json];rel[admin_level=2][\"ISO3166-1\"=\""
@@ -78,6 +86,34 @@ export class MapLayersService {
       countries = arabic.countries;
       color = {style: {'color': '#00FFFF'}};
       languageLayers = this.arabicLayers;
+    }
+    else if(language == "pt")
+    {
+      numCountries = 9;
+      countries = portuguese.countries;
+      color = {style: {'color': '#008B00'}};
+      languageLayers = this.portugueseLayers;
+    }
+    else if(language == "ru")
+    {
+      numCountries = 5;
+      countries = russian.countries;
+      color = {style: {'color': '#00008B'}};
+      languageLayers = this.russianLayers;
+    }
+    else if(language == "jp")
+    {
+      numCountries = 2;
+      countries = japanese.countries;
+      color = {style: {'color': '#640064'}};
+      languageLayers = this.japaneseLayers;
+    }
+    else if(language == "kr")
+    {
+      numCountries = 2;
+      countries = korean.countries;
+      color = {style: {'color': '#8B0000'}};
+      languageLayers = this.koreanLayers;
     }
 
     // For each country in the array of countries that speak this language
@@ -145,6 +181,22 @@ export class MapLayersService {
     else if(language == "ab")
     {
       languageLayers = this.arabicLayers;
+    }
+    else if(language == "pt")
+    {
+      languageLayers = this.portugueseLayers;
+    }
+    else if(language == "ru")
+    {
+      languageLayers = this.russianLayers;
+    }
+    else if(language == "jp")
+    {
+      languageLayers = this.japaneseLayers;
+    }
+    else if(language == "kr")
+    {
+      languageLayers = this.koreanLayers;
     }
 
     // For each layer for this languageLayers array
