@@ -6,77 +6,13 @@ import { MapLayersService } from '../map-layers.service';
   selector: 'app-select-language',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (change)="languageChange($event, 'en')">
-        <label class="form-check-label" for="flexCheckDefault">
-          English
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'fr')">
-        <label class="form-check-label" for="flexCheckChecked">
-          French
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'es')">
-        <label class="form-check-label" for="flexCheckChecked">
-          Spanish
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'md')">
-        <label class="form-check-label" for="flexCheckChecked">
-          Mandarin
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'hd')">
-        <label class="form-check-label" for="flexCheckChecked">
-          Hindi
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'ab')">
-        <label class="form-check-label" for="flexCheckChecked">
-          Arabic
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'pt')">
-        <label class="form-check-label" for="flexCheckChecked">
-          Portuguese
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'ru')">
-        <label class="form-check-label" for="flexCheckChecked">
-          Russian
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'jp')">
-        <label class="form-check-label" for="flexCheckChecked">
-          Japanese
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" (change)="languageChange($event, 'kr')">
-        <label class="form-check-label" for="flexCheckChecked">
-          Korean
-        </label>
-      </div>
-
-    </div>
-  `,
+  templateUrl: './select-language.component.html',
   styleUrls: ['./select-language.component.css']
 })
 
 export class SelectLanguageComponent {
   // Called when a language selection checkbox is changed
-  languageChange(event: Event, language: String) {
+  languageChange(event: Event, language: string) {
     // If the checkbox has been checked
     if(((event.target) as HTMLInputElement).checked) {
       this.layersService.addLayers(language); // Add each country that speaks this language to the layers array
