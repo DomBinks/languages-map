@@ -37,7 +37,7 @@ export class MapLayersService {
   // Storest the list of countries for each language
   public countriesMap: Map<string, any> = new Map<string,any>([
     ["en", english.countries],
-    ["fs", french.countries],
+    ["fr", french.countries],
     ["es", spanish.countries],
     ["md", mandarin.countries],
     ["hd", hindi.countries],
@@ -51,7 +51,7 @@ export class MapLayersService {
   // Stores the color for each language
   public colorMap: Map<string, any> = new Map<string,any>([
     ["en", {style: {'color': '#00FF00'}}],
-    ["fs", {style: {'color': '#0000FF'}}],
+    ["fr", {style: {'color': '#0000FF'}}],
     ["es", {style: {'color': '#FF0000'}}],
     ["md", {style: {'color': '#FFFF00'}}],
     ["hd", {style: {'color': '#FF00FF'}}],
@@ -65,7 +65,7 @@ export class MapLayersService {
   // Stores all the layers for each language
   public layersMap: Map<string, Leaflet.Layer[]> = new Map<string,Leaflet.Layer[]>([
     ["en", []],
-    ["fs", []],
+    ["fr", []],
     ["es", []],
     ["md", []],
     ["hd", []],
@@ -97,6 +97,12 @@ export class MapLayersService {
           this.codeToGeoJSON.get(countries[i].toUpperCase()) as any, color); // Create a Leaflet Layer using the GeoJson
         this.layers.push(layer); // Add the layer to the layers on the map 
         languageLayers.push(layer); // Add the layer to the layers for this language
+
+        // If all the layers have been added
+        if(languageLayers.length == numCountries) {
+          // Enable the checkbox again
+          (<HTMLInputElement> document.getElementById(language)).disabled = false;
+        }
       }
       // If we need to fetch this country's GeoJSON
       else
@@ -117,6 +123,12 @@ export class MapLayersService {
           let layer: Leaflet.Layer = Leaflet.geoJSON(json as any, color); // Create a Leaflet Layer using the GeoJson
           this.layers.push(layer); // Add the layer to the layers on the map 
           languageLayers.push(layer); // Add the layer to the layers for this language
+        }).then(() => {
+          // If all the layers have been added
+          if(languageLayers.length == numCountries) {
+            // Enable the checkbox again
+            (<HTMLInputElement> document.getElementById(language)).disabled = false;
+          }
         })
       }
     }
@@ -126,15 +138,10 @@ export class MapLayersService {
   removeLayers(language: string) {
     let languageLayers: Leaflet.Layer[] = this.layersMap.get(language) || []; // Get the layers array for this language
 
-    // For each layer for this languageLayers array
-    languageLayers.forEach(element => {
-        let index: number = this.layers.indexOf(element); // Get the index of this layer
+    // Remove all the layers in the layers array for this language from the current layers array
+    this.layers = this.layers.filter((elem) => languageLayers.indexOf(elem) == -1);
 
-        if(index != -1) // If this layer is in the array of layers on the map
-        {
-          this.layers.splice(index, 1); // Remove it from the array of layers on the map
-        }
-    });
+    this.layersMap.set(language, []); // Set the layers array for this language to an empty array
   }
 
   constructor() {}

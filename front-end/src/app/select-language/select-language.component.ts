@@ -15,6 +15,7 @@ export class SelectLanguageComponent {
   languageChange(event: Event, language: string) {
     // If the checkbox has been checked
     if(((event.target) as HTMLInputElement).checked) {
+      (<HTMLInputElement> document.getElementById(language)).disabled = true; // Disable the checkbox while adding
       this.layersService.addLayers(language); // Add each country that speaks this language to the layers array
     }
     // If the checkbox has been unchecked
@@ -22,6 +23,6 @@ export class SelectLanguageComponent {
       this.layersService.removeLayers(language); // Remove each country that speaks this language from the layers array
     }
   }
-  
+
   constructor(private layersService: MapLayersService) {}
 }
