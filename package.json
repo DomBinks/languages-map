@@ -25,7 +25,7 @@
     "bootstrap": "^5.3.0",
     "jquery": "^3.7.0",
     "leaflet": "^1.9.4",
-    "osmtogeojson": "^3.0.0-beta.5",
+    "osmtogeojson": "^2.2.12",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
