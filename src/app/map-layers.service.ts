@@ -80,6 +80,9 @@ export class MapLayersService {
   public urlPrefix: string = "https://overpass-api.de/api/interpreter?data=[out:json];rel[admin_level=2][\"ISO3166-1\"=\""
   public urlSuffix: string = "\"];out%20geom;"
 
+  public checked: Array<string> = []; // Stores the languages that have checked checkboxes
+  public disabled: Array<string> = []; // Stores the language that have disabled checkboxes
+
   // Add the specified language's layer(s) to the array
   addLayers(language: string) {
     let numCountries: number = this.numCountriesMap.get(language) || 0; // The number of countries that speak this language
@@ -100,6 +103,8 @@ export class MapLayersService {
 
         // If all the layers have been added
         if(languageLayers.length == numCountries) {
+          // Remove the language from the disabled list
+          this.disabled = this.disabled.filter((elem) => elem !== language);
           // Enable the checkbox again
           (<HTMLInputElement> document.getElementById(language)).disabled = false;
         }
@@ -126,6 +131,8 @@ export class MapLayersService {
         }).then(() => {
           // If all the layers have been added
           if(languageLayers.length == numCountries) {
+            // Remove the language from the disabled list
+            this.disabled = this.disabled.filter((elem) => elem !== language);
             // Enable the checkbox again
             (<HTMLInputElement> document.getElementById(language)).disabled = false;
           }
