@@ -14,15 +14,9 @@ import { SelectLanguageComponent } from '../select-language/select-language.comp
     SelectLanguageComponent,
   ],
   template: `
-    <div class="container text-centre">
-      <div class="row align-items-center">
-        <div class="col">
-          <app-map></app-map>
-        </div>
-        <div class="col">
-          <app-select-language></app-select-language>
-        </div>
-      </div>
+    <div class="content">
+      <app-map></app-map>
+      <app-select-language></app-select-language>
     </div>
   `,
   styleUrls: ['./map-page.component.css']

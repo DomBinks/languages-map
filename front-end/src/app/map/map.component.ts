@@ -12,18 +12,24 @@ import { MapLayersService } from '../map-layers.service';
     LeafletModule
   ],
   template: `
-    <div class="map" style="width: 1100px; height: 750px;"
+    <div class="map" style="height: 100%; width: 100%;"
       leaflet [leafletOptions]="options" [leafletLayers]="this.layersService.layers"></div>
   `,
   styleUrls: ['./map.component.css']
 })
 export class MapComponent {
+  bounds: Leaflet.LatLngBounds = Leaflet.latLngBounds(
+    Leaflet.latLng(-90,-200),
+    Leaflet.latLng(90, 200)
+  );
+
   options: Leaflet.MapOptions = {
     layers: getLayers(),
-    zoom: 2,
+    zoom: 3,
     maxZoom: 14,
-    minZoom: 2,
-    center: new Leaflet.LatLng(0, 0),
+    minZoom: 3,
+    center: new Leaflet.LatLng(51.4769, 0.0005),
+    maxBounds: this.bounds,
   };
 
   constructor(public layersService: MapLayersService) {}

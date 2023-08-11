@@ -1,0 +1,31 @@
+.content {
+    display: flex;
+    align-items: center;
+}
+
+app-map {
+    height: 94vh;
+    width: 80vw;
+}
+
+app-select-language {
+    width: 20%;
+    padding-left: 1%;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        flex-direction: column;
+    }
+
+    app-map {
+        height: 60vh;
+        width: 100vw;
+    }
+
+    app-select-language {
+        width: 100%;
+        padding-left: 0%;
+        padding-top: 1%;
+    }
+}

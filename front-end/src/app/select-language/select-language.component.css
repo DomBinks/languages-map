@@ -1,0 +1,9 @@
+@media screen and (max-width: 1200px) {
+    .form-check {
+        display: flex;
+        justify-content: center;
+    }
+    .form-check-label {
+        padding-left: 7px;
+    }
+}
