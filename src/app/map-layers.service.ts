@@ -24,56 +24,56 @@ export class MapLayersService {
   public numCountriesMap: Map<string, number> = new Map<string,number>([
     ["en", 71],
     ["fr", 28],
-    ["es", 20],
-    ["md", 3],
-    ["hd", 1],
     ["ab", 24],
-    ["pt",9],
-    ["ru",5],
-    ["jp",2],
-    ["kr",2]
+    ["es", 20],
+    ["pt", 9],
+    ["ru", 5],
+    ["md", 3],
+    ["jp", 2],
+    ["kr", 2],
+    ["hd", 1]
   ]);
 
   // Storest the list of countries for each language
   public countriesMap: Map<string, any> = new Map<string,any>([
     ["en", english.countries],
     ["fr", french.countries],
-    ["es", spanish.countries],
-    ["md", mandarin.countries],
-    ["hd", hindi.countries],
     ["ab", arabic.countries],
+    ["es", spanish.countries],
     ["pt", portuguese.countries],
     ["ru", russian.countries],
+    ["md", mandarin.countries],
     ["jp", japanese.countries],
     ["kr", korean.countries],
+    ["hd", hindi.countries],
   ]);
 
   // Stores the color for each language
   public colorMap: Map<string, any> = new Map<string,any>([
     ["en", {style: {'color': '#00FF00'}}],
     ["fr", {style: {'color': '#0000FF'}}],
-    ["es", {style: {'color': '#FF0000'}}],
-    ["md", {style: {'color': '#FFFF00'}}],
-    ["hd", {style: {'color': '#FF00FF'}}],
     ["ab", {style: {'color': '#00FFFF'}}],
+    ["es", {style: {'color': '#FF0000'}}],
     ["pt", {style: {'color': '#008B00'}}],
     ["ru", {style: {'color': '#00008B'}}],
+    ["md", {style: {'color': '#FFFF00'}}],
     ["jp", {style: {'color': '#640064'}}],
     ["kr", {style: {'color': '#8B0000'}}],
+    ["hd", {style: {'color': '#FF00FF'}}],
   ]);
 
   // Stores all the layers for each language
   public layersMap: Map<string, Leaflet.Layer[]> = new Map<string,Leaflet.Layer[]>([
     ["en", []],
     ["fr", []],
-    ["es", []],
-    ["md", []],
-    ["hd", []],
     ["ab", []],
+    ["es", []],
     ["pt", []],
     ["ru", []],
+    ["md", []],
     ["jp", []],
     ["kr", []],
+    ["hd", []],
   ]);
 
   // Get the prefix and suffix of the URL used to get the geojson data

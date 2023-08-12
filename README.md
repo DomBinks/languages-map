@@ -1,6 +1,6 @@
-# Lang Map
+# Languages Map
 
-### Lang Map is an interactive tool that visualises where different languages are spoken around the world.
+### Languages Map is an interactive tool that visualises where different languages are spoken around the world.
 
 - The tool allows you to select a range of different languages, and have the countries that speak those languages highlighted on a map in different colours.
 - It's been created using Typescript, Angular, Bootstrap, HTML, and CSS.

@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
     <div class="header">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <img src="favicon.ico" alt="Lang-Map" width="30" height="24" class="d-inline-block align-text-top">
-          <a class="navbar-brand" href="/" [routerLink]="['/']">Lang Map</a>
+          <img src="favicon.ico" alt="Languages-Map" width="30" height="24" class="d-inline-block align-text-top">
+          <a class="navbar-brand" href="/" [routerLink]="['/']">Languages Map</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
             aria-expanded="false" aria-label="Toggle navigation">
