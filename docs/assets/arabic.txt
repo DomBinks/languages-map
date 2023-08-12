@@ -1,0 +1,26 @@
+dz,Algeria
+bh,Bahrain
+td,Chad
+km,Comoros
+dj,Djibouti
+eg,Egypt
+iq,Iraq
+jo,Jordan
+kw,Kuwait
+lb,Lebanon
+ly,Libya
+mr,Mauritania
+ma,Morocco
+om,Oman
+ps,Palestine
+qa,Qatar
+sa,Saudi Arabia
+so,Somalia
+sd,Sudan
+sy,Syria
+tn,Tunisia
+ae,United Arab Emirates
+ye,Yemen
+eh,Western Sahara
+
+Zanzibar

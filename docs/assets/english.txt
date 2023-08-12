@@ -1,0 +1,81 @@
+ai,Anguilla
+ag,Antigua and Barbuda
+bs,Bahamas
+bb,Barbados
+bz,Belize
+bm,Bermuda
+vg,British Virgin Islands
+ca,Canada
+ky,Cayman Islands
+dm,Dominica
+gd,Grenada
+jm,Jamaica
+ms,Montserrat
+kn,Saint Kitts and Nevis
+lc,Saint Lucia
+vc,Saint Vincent and the Grenadines
+tt,Trinidad and Tobago
+tc,Turks and Caicos Islands
+us,United States
+fk,Falkland Islands
+gy,Guyana
+gi,Gibraltar
+gg,Guernsey
+ie,Ireland
+im,Isle of Man
+je,Jersey
+mt,Malta
+gb,United Kingdom
+bw,Botswana
+cm,Cameroon
+sz,Eswatini
+gm,The Gambia
+gh,Ghana
+ke,Kenya
+ls,Lesotho
+lr,Liberia
+mw,Malawi
+mu,Mauritius
+na,Namibia
+ng,Nigeria
+rw,Rwanda
+sh,Saint Helena, Ascension and Tristan da Cunha
+sl,Sierra Leone
+za,South Africa
+ss,South Sudan
+sd,Sudan
+tz,Tanzania
+ug,Uganda
+zm,Zambia
+zw,Zimbabwe
+in,India
+pk,Pakistan
+ph,Philippines
+sg,Singapore
+au,Australia
+ck,Cook Islands
+fj,Fiji
+ki,Kiribati
+mh,Marshall Islands
+fm,Federated States of Micronesia
+nr,Nauru
+nz,New Zealand
+nu,Niue
+pw,Palau
+pg,Papua New Guinea
+pn,Pitcairn Islands
+ws,Samoa
+sb,Solomon Islands
+tk,Tokelau
+tv,Tuvalu
+vu,Vanuatu
+
+Puerto Rico
+Virgin Islands, U.S.
+Akrotiri and Dhekelia
+Christmas Island
+Cocos Islands
+American Samoa
+Guam
+Norfolk Islands
+Northern Mariana Islands

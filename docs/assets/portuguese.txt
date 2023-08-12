@@ -1,0 +1,9 @@
+ao,Angola
+br,Brazil
+cv,Cape Verde
+tl,East Timor
+gq,Equatorial Guinea
+gw,Guinea-Bissau
+mz,Mozambique
+pt,Portugal
+st,São Tomé and Príncipe

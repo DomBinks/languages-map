@@ -1,0 +1,5 @@
+ru,Russia
+by,Relarus
+kz,Kazakhstan
+kg,Kyrgyzstan
+tj,Tajikistan
