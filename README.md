@@ -4,6 +4,7 @@
 
 - The tool allows you to select a range of different languages, and have the countries that speak those languages highlighted on a map in different colours.
 - It's been created using Typescript, Angular, Bootstrap, HTML, and CSS.
+- Check it out [here](https://dombinks.github.io/languages-map).
 
 ## FAQ:
 ### Why did you create this tool?
@@ -20,3 +21,7 @@ Generally, I've only included countries where the language is an official langua
 
 There are thousands of languages spoken around the world, so I've decided to only add a select few.
 In the future, I may decide to add other languages.
+
+### Why does it take so long to load?
+
+A large amount of data has to be fetched to create the overlays, so can take some time to download.
