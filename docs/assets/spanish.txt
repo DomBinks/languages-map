@@ -1,0 +1,20 @@
+ar,Argentina
+bo,Bolivia
+cl,Chile
+co,Colombia
+cr,Costa Rica
+cu,Cuba
+do,Dominican Republic
+ec,Ecuador
+sv,El Salvador
+gq,Equatorial Guinea
+gt,Guatemala
+hn,Honduras
+mx,Mexico
+ni,Nicaragua
+pa,Panama
+py,Paraguay
+pe,Peru
+es,Spain
+uy,Uruguay
+ve,Venezuela
