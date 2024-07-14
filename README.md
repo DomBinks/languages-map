@@ -2,8 +2,8 @@
 
 ### Languages Map is an interactive tool that visualises where different languages are spoken around the world.
 
-- The tool allows you to select a range of different languages, and have the countries that speak those languages highlighted on a map in different colours.
-- It's been created using Typescript, Angular, Bootstrap, HTML, and CSS.
+- The tool allows you to select a range of different languages, and highlights the countries that speak those languages on the map in different colours.
+- Developed with Angular(TypeScript), Bootstrap, HTML, and CSS.
 - Check it out [here](https://dombinks.github.io/languages-map).
 
 ## FAQ:
